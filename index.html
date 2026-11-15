@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="da"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stjernen i lommen · Julens eventyrbog</title>
+<meta name="description" content="En tegne-julekalender med dit barn som hovedperson: 24 korte kapitler, 24 tegneopgaver, og en bog, I selv har lavet, når det bliver juleaften.">
+<style>
+@font-face{font-family:Alegreya;src:url(fonts/a.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Alegreya;font-style:italic;src:url(fonts/ai.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Alegreya;font-weight:700;src:url(fonts/ab.woff2) format("woff2");font-display:swap}
+@font-face{font-family:Caveat;src:url(fonts/c.woff2) format("woff2");font-display:swap}
+:root{--night:#14213d;--deep:#0d1730;--cream:#fbf6ea;--paper:#fffdf7;--ink:#22263a;--soft:#6a6f85;--red:#b3312c;--gold:#e0a82e;--line:#e3dac6;
+--serif:Alegreya,Georgia,serif;--hand:Caveat,"Comic Sans MS",cursive}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:19px/1.6 var(--serif)}
+.sky{background:radial-gradient(1200px 500px at 70% -10%,#24376b 0,var(--night) 45%,var(--deep) 100%);color:var(--cream);position:relative;overflow:hidden}
+.sky::before{content:"";position:absolute;inset:0;background-image:radial-gradient(1.5px 1.5px at 12% 22%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 28% 61%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 44% 14%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 58% 42%,#fff 50%,transparent 51%),radial-gradient(2px 2px at 83% 30%,#ffe9a8 50%,transparent 51%),radial-gradient(1px 1px at 91% 68%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 7% 78%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 68% 82%,#fff 50%,transparent 51%);opacity:.8}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px;position:relative}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:56px 0 0}
+.kick{font:600 1.5rem var(--hand);color:var(--gold);margin:0}
+h1{font:700 clamp(2.6rem,7vw,4.6rem)/1 var(--serif);margin:.1em 0 .25em;letter-spacing:-.01em}
+.hero p{max-width:30em;font-size:1.15rem;color:#dcdff0}
+.snow{display:block;width:100%;height:70px;margin-top:30px}
+h2{font:700 clamp(1.7rem,4vw,2.3rem)/1.15 var(--serif);margin:0 0 .4em}
+section{padding:54px 0}
+.maker{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:26px;box-shadow:0 2px 0 var(--line);display:grid;gap:16px}
+.names{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+label{display:block;font-weight:700;font-size:.95rem;margin-bottom:4px}
+input[type=text]{width:100%;font:1.1rem var(--serif);padding:11px 12px;border:1.5px solid var(--ink);border-radius:4px;background:#fff;color:var(--ink)}
+input:focus,button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+button{font:700 1.05rem var(--serif);padding:13px 22px;border-radius:4px;border:0;background:var(--red);color:#fff;cursor:pointer}
+button.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btns{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.small{font-size:.9rem;color:var(--soft)}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:s}
+.how div{counter-increment:s}.how div::before{content:counter(s);font:600 2.6rem/1 var(--hand);color:var(--red);display:block}
+.how h3{margin:.1em 0;font-size:1.2rem}.how p{margin:0;color:var(--soft);font-size:1rem}
+.book{display:grid;gap:26px}
+.pg{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:34px 38px;position:relative;box-shadow:0 2px 0 var(--line)}
+.pg .day{position:absolute;top:18px;right:22px;width:62px;height:62px}
+.pg .day text{font:700 21px var(--serif);fill:var(--night)}
+.pg h3{font:700 1.7rem/1.15 var(--serif);margin:0 80px .5em 0}
+.pg p{margin:0 0 .7em;max-width:34em}
+.task{font:600 1.5rem/1.25 var(--hand);color:var(--red);margin:.6em 0 .4em!important}
+.frame{border:2px dashed #c9bfa6;border-radius:10px;height:230px;display:flex;align-items:flex-end;justify-content:flex-end;padding:8px 12px;color:#b9ae93;font:600 1.1rem var(--hand)}
+.cover{background:var(--night);color:var(--cream);text-align:center;padding:60px 30px;border:0}
+.cover h3{font-size:clamp(2.4rem,6vw,3.6rem);margin:0 0 .2em}.cover .by{font:600 1.9rem var(--hand);color:var(--gold)}
+.cover svg{width:120px;height:120px;display:block;margin:0 auto}
+.dip{text-align:center;border:3px double var(--gold)}.dip h3{margin:0 0 .3em}
+.note{border-left:4px solid var(--gold);padding:10px 16px;background:var(--paper);font-size:1rem}
+footer{padding:30px 0 60px;color:var(--soft);font-size:.92rem;border-top:1px solid var(--line)}
+@media(max-width:760px){.hero,.how{grid-template-columns:1fr}.names{grid-template-columns:1fr}.pg{padding:26px 20px}.hero svg.star{max-width:180px}}
+@media print{
+ @page{size:A4;margin:16mm}
+ body{background:#fff;font-size:15pt}.noprint,.sky,footer{display:none!important}section{padding:0}.wrap{max-width:none;padding:0}
+ .book{display:block}.pg{border:0;box-shadow:none;padding:0;page-break-after:always;break-after:page;min-height:255mm;display:flex;flex-direction:column}
+ .pg{background:#fff}.pg .day{position:static;float:right;margin:0 0 6px 14px;width:22mm;height:22mm;align-self:flex-end}.pg h3{margin:-18mm 26mm .5em 0;font-size:24pt}.pg p{max-width:none}.task{font-size:20pt}
+ .cover{background:var(--night)}.cover svg{width:50mm;height:50mm}.cover h3{font-size:44pt;margin:6mm 0 2mm}.dip h3{margin:0 0 .3em}
+ .pg:last-child{page-break-after:auto}.frame{flex:1;height:auto;min-height:110mm}
+ .cover{justify-content:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:20mm}.dip{justify-content:center;border:3px double var(--gold);padding:14mm}
+}
+</style></head><body>
+<div class="sky noprint"><div class="wrap">
+ <div class="hero">
+  <div><p class="kick">Julens eventyrbog · tegne-julekalender</p>
+  <h1>Stjernen i lommen</h1>
+  <p>En lille stjerne er faldet ned uden for vinduet, og den skal hjem inden juleaften. Dit barn er den, der finder den. Et kort kapitel hver aften i december, en tegning hver dag, og en bog, I selv har lavet, når det bliver den 24.</p></div>
+  <svg class="star" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="78" fill="#ffe9a8" opacity=".12"/><circle cx="100" cy="100" r="52" fill="#ffe9a8" opacity=".16"/><path d="M100 38l15 40 43 3-33 27 11 42-36-23-36 23 11-42-33-27 43-3z" fill="#f2c14e" stroke="#fff3c9" stroke-width="3" stroke-linejoin="round"/><circle cx="88" cy="96" r="4" fill="#14213d"/><circle cx="112" cy="96" r="4" fill="#14213d"/><path d="M90 110q10 9 20 0" fill="none" stroke="#14213d" stroke-width="3" stroke-linecap="round"/></svg>
+ </div></div>
+ <svg class="snow" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 70V40q150-40 300-10t300 0 300-12 300 14v38z" fill="#fbf6ea"/></svg>
+</div>
+
+<div class="wrap">
+<section class="noprint">
+ <h2>Hvem finder stjernen?</h2>
+ <div class="maker">
+  <div class="names">
+   <div><label for="n1">Barnets navn</label><input type="text" id="n1" maxlength="24" autocomplete="off" placeholder="Fx Alma"></div>
+   <div><label for="n2">En søster eller bror (valgfrit)</label><input type="text" id="n2" maxlength="24" autocomplete="off"></div>
+   <div><label for="n3">Og en til (valgfrit)</label><input type="text" id="n3" maxlength="24" autocomplete="off"></div>
+  </div>
+  <div class="btns"><button id="go">Lav vores bog</button><button class="alt" id="pr">Print eller gem som PDF</button><span class="small">Navnene bliver i din browser. Intet sendes.</span></div>
+ </div>
+</section>
+
+<section class="noprint">
+ <h2>Sådan bruger I den</h2>
+ <div class="how">
+  <div><h3>Print bogen</h3><p>26 sider i A4. Sæt dem i en mappe, eller hæft dem sammen. Én side for hver dag fra 1. til 24. december.</p></div>
+  <div><h3>Læs og tegn</h3><p>Læs dagens kapitel højt. Det tager to minutter. Så tegner barnet dagens opgave i rammen på siden.</p></div>
+  <div><h3>Tegningen går videre</h3><p>Næste kapitel begynder med det, der blev tegnet i går. Derfor bliver historien jeres og ingen andres.</p></div>
+ </div>
+ <p class="note" style="margin-top:26px">Passer til børn fra cirka 4 til 9 år. De mindste tegner, de største kan selv læse. Historien handler om vinter, lys og at give noget væk, og den kan læses i alle hjem.</p>
+</section>
+
+<section><h2 class="noprint">Jeres bog</h2><div class="book" id="book"></div></section>
+
+<footer class="noprint">Julens eventyrbog er gratis at bruge og printe til jer selv i 2026. Siden sætter ingen cookies og gemmer ingenting. Tekst og tegninger © Julens eventyrbog.</footer>
+</div>
+
+<script>
+const CH=[
+["Noget i sneen","Den første morgen i december lå der noget uden for vinduet. Det var ikke sne, og det var ikke en tabt vante. {N} gik helt tæt på. Det var en stjerne. Den var ikke større end en hånd, og den lyste kun en lille smule, som en lommelygte, der er ved at løbe tør. ”Jeg er faldet ned,” hviskede stjernen. ”Og jeg skal hjem inden juleaften. Vil du hjælpe mig?” {N} nikkede med det samme.","Tegn stjernen, sådan som du tror, den ser ud."],
+["Et navn","Nu vidste {N} præcis, hvordan stjernen så ud. Det stod jo på tegningen fra i går. Men én ting manglede. ”Hvad hedder du?” spurgte {N}. Stjernen blinkede langsomt. ”Det kan jeg ikke huske. Jeg tror, navnet faldt af på vejen ned.” En stjerne uden navn kan man ikke kalde på, hvis den bliver væk. Så {N} tænkte sig godt om og fandt på det helt rigtige navn.","Lav et navneskilt til stjernen. Skriv navnet, eller få en voksen til at hjælpe, og pynt det."],
+["En seng til en stjerne","Stjernen var glad for sit navn og sagde det højt tre gange. Så gabte den, og en lille gnist fløj ud. ”Hvor sover stjerner?” spurgte {N}. ”Oppe sover vi på ingenting,” sagde stjernen. ”Men hernede er ingenting så hårdt.” De ledte i hele huset. En sok var for kradsende. En kop var for kold. Til sidst fandt {N} på en seng, der var helt rigtig.","Tegn stjernens seng. Hvad er den lavet af? Har den en dyne?"],
+["Stjernemad","Stjernen sov godt i sengen fra i går. Men om morgenen lyste den svagere end før. ”Jeg er sulten,” sagde den. {N} hentede en småkage. Stjernen kiggede høfligt på den. ”Tak, men stjerner spiser lys. Måneskin smager af mælk. Stearinlys smager af honning. Og lyset fra et køleskab smager af ingenting.” Sammen gik de rundt og smagte på alt lyset i huset.","Tegn stjernens livret. Hvilket lys tror du smager allerbedst?"],
+["Kortet","Mæt og varm kunne stjernen huske lidt mere. ”Da jeg faldt, så jeg tre ting: et skævt træ, en bro og et tårn. Tårnet var det højeste. Derfra er der kortest hjem.” {N} hentede papir. Hvis man skal finde vej til det højeste sted, skal man have et kort. Og et kort skal begynde der, hvor man bor.","Tegn et kort fra jeres hus til det højeste sted, du kender. Husk et skævt træ og en bro på vejen."],
+["Fru Krage","Med kortet fra i går i hånden gik {N} ud, med stjernen gemt i lommen. Det skæve træ var let at finde. Men øverst i træet sad en krage med et halstørklæde af sølvpapir. ”Jeg er Fru Krage,” sagde hun, ”og jeg samler på alt, der blinker. Hvad er det, der lyser i din lomme?” Stjernen holdt vejret. Kragens rede var fuld af skinnende ting.","Tegn Fru Krages rede med alle de blanke ting, hun har samlet."],
+["En byttehandel","Fru Krage ville have stjernen til sin rede, den fra tegningen i går. ”Nej,” sagde {N}. ”En stjerne er ikke en ting. Den er en ven.” Kragen lagde hovedet på skrå. ”Så lad os bytte. Jeg kender en hemmelighed om, hvordan stjerner kommer hjem. Den får du, hvis du giver mig et billede af noget, der er blankere end alt, jeg ejer.”","Tegn det blankeste, du kan forestille dig. Det er til Fru Krage."],
+["Kragens hemmelighed","Fru Krage så længe på tegningen fra i går og hængte den op midt i reden. ”En handel er en handel,” sagde hun. ”Hør godt efter. Stjerner flyver ikke hjem. De falder opad. Men kun når de er tunge nok af lys. I skal samle syv slags lys inden juleaften. Hvilke syv, må I selv finde ud af.” Så fløj hun. {N} så på stjernen. De måtte have noget at samle lyset i.","Tegn et glas eller en krukke til at samle lys i. Lav syv streger på siden, så I kan tælle."],
+["Det første lys","Glasset fra i går stod klar i vindueskarmen. Men hvor finder man lys, der kan samles? Den aften gik {N} en tur med en voksen. I et vindue længere nede ad vejen stod en lampe tændt, og bag ruden sad en og kiggede ud. ”Det er vente-lys,” hviskede stjernen. ”Det er lyset fra en, der venter på, at nogen kommer hjem. Det er meget stærkt.” Pling, sagde det i glasset. Det første lys.","Tegn et vindue med lys i. Hvem sidder og venter bag ruden?"],
+["Det andet lys","Der var ét lys i glasset, og vinduet fra i går hang på væggen. Om natten frøs det. Om morgenen var alt dækket af rim, og da solen kom frem, glimtede hvert eneste græsstrå. ”Kig helt tæt på,” sagde stjernen. På {N}s vante landede et snefnug. Det havde seks arme, og ingen af dem var ens med nogen andre i hele verden. ”Is-lys,” sagde stjernen. Pling.","Tegn et snefnug, der er så stort, at det fylder hele rammen."],
+["Det tredje lys","To lys i glasset. Snefnugget fra i går blev hængt op ved siden af vinduet. Men den dag var der ikke noget lys at finde. Det var gråt og vådt. Stjernen sad og hang med takkerne. Så kom {N} til at sige noget rigtig fjollet, og så endnu en ting, og til sidst grinede de begge to, så de fik ondt i maven. Pling, sagde det. ”Latter-lys,” gispede stjernen. ”Det vidste jeg ikke fandtes.”","Tegn det sjoveste, du ved. Stjernen vil gerne grine igen."],
+["Halvvejs","Tre lys. Men da {N} talte dagene, var halvdelen af december gået, og der manglede fire. Stjernen blev helt bleg. ”Tænk, hvis vi ikke når det. Tænk, hvis jeg aldrig kommer hjem.” {N} holdt stjernen i begge hænder. ”Da jeg var bange, hjalp det at tænke på noget, der gør mig modig. Det kan du låne.” Stjernen lyste en lille smule op.","Tegn noget, der gør dig modig. Stjernen har brug for at låne det."],
+["Broen","Stjernen kiggede på tegningen fra i går, hver gang den blev bange. Det hjalp. Nu skulle de over broen. Men broen var glat af is, og det var ved at blive mørkt. Så kom en gammel mand gående med sin cykel. Han sagde ikke ret meget. Han tændte bare cykellygten og holdt den, så {N} kunne se, hvor man skulle træde. ”Hjælpe-lys,” hviskede stjernen. Pling. Det fjerde.","Tegn broen, manden og lyset fra cykellygten."],
+["Det femte lys","Fire lys. Efter turen over broen i går var {N} kold helt ind i fingrene. Hjemme blev ovnen tændt, og der blev bagt. Stjernen sad på køkkenbordet og kiggede ind gennem ovnens rude, hvor lyset var gult og varmt, og det duftede i hele huset. ”Det her lys kan man lugte,” sagde den forbavset. Pling. ”Hjemme-lys.”","Tegn en kage til en stjerne. Hvad skal der være på toppen?"],
+["Vente på månen","Fem lys. Kagen fra i går var for længst spist. ”Det sjette lys er måneskin,” sagde stjernen. ”Det ved jeg helt sikkert.” Men himlen var lukket af skyer. De ventede en aften. De ventede en aften til. {N} syntes, det var svært at vente. ”Det er det også,” sagde stjernen. ”Men månen er der hele tiden, også når vi ikke kan se den.” Og sent den aften gled skyerne fra hinanden. Pling.","Tegn månen, som den ser ud fra dit vindue."],
+["Fru Krage kommer tilbage","Seks lys. Stjernen var blevet så tung, at {N} måtte bære den med begge hænder. Der bankede noget på ruden. Det var Fru Krage. ”Jeg har tænkt,” sagde hun. ”Jeg har en hel rede fuld af blanke ting, og jeg har ingen at vise dem til. Må jeg hjælpe?” I næbbet havde hun en gave: den fineste knap fra reden.","Tegn Fru Krage med gaven. Hvordan ser knappen ud?"],
+["Det sværeste lys","Knappen fra i går blev syet fast på {N}s jakke. Nu manglede kun ét lys. De ledte overalt. I lamper, i lygtepæle, i øjnene på en kat. Intet sagde pling. Fru Krage rømmede sig. ”Det syvende lys kan man ikke finde. Man kan kun lave det. Det kommer, når man giver noget væk, uden at få noget igen.” Stjernen forstod det ikke. Men {N} fik en idé.","Tegn noget, du gerne vil give til en anden. Det skal være en rigtig tegning, for i morgen skal den bruges."],
+["Postkassen","{N} tog tegningen fra i går og foldede den pænt. På vejen boede en, der ikke fik så tit besøg. {N} skrev ”Til dig” udenpå og lagde tegningen i postkassen, helt stille, uden at ringe på. På vej hjem blev lommen pludselig varm. Stjernen lyste, så det skinnede ud gennem stoffet. PLING. ”Give-lys,” hviskede den. ”Det var det stærkeste af dem alle.”","Tegn postkassen, og hvem du tror, der fandt tegningen. Måske kan I give en rigtig tegning til en i dag?"],
+["Tårnet","Syv lys i glasset. Stjernen var nu så tung af lys, at den summede. Tårnet var det højeste sted på kortet. Indeni var der en trappe, der snoede sig rundt og rundt. {N} talte trinene højt. Fru Krage fløj i forvejen og råbte, hvor mange der var tilbage. Ved trin hundrede måtte de holde pause og spise en kiks.","Tegn tårnet udefra med alle vinduerne. Hvor mange trin tror du, der er?"],
+["Øverst oppe","Øverst i tårnet fra i går hang en gammel klokke, og hele byen lå nedenunder med små lys. ”Nu kan jeg falde opad,” sagde stjernen. Men den blev siddende. ”Jeg vil gerne hjem. Men jeg vil ikke væk fra dig.” {N} fik en klump i halsen. Fru Krage kiggede den anden vej og lod, som om hun havde fået noget i øjet.","Tegn dig selv og stjernen sammen, så den kan få billedet med hjem."],
+["Et sted på himlen","Stjernen fik tegningen fra i går og gemte den bag en tak. ”Så aftaler vi et sted,” sagde {N}. ”Så ved jeg, hvor du er.” De kiggede op. Stjernen pegede. ”Der. Lige over jeres tag, den tredje fra venstre. Og hver aften blinker jeg to gange. Så ved du, det er mig.” {N} øvede sig i at finde stedet, til det sad helt fast.","Tegn nattehimlen over jeres hus, og sæt et kryds der, hvor stjernen skal bo."],
+["Stjernen i lommen","”Jeg har også en gave,” sagde stjernen. Den rystede sig, og et lillebitte korn af lys faldt af, ikke større end et sukkerkorn. Det trillede ned i {N}s lomme. ”Det går aldrig ud. Når du er ked af det, eller når det er mørkt, så mærk efter. Så er lommen varm.” {N} mærkede efter. Det passede.","Tegn din lomme og alt det, der bor i den. Husk lyskornet."],
+["Opad","Aftenen før juleaften gik de op i tårnet en sidste gang. Stjernen lagde sig i {N}s hænder. ”En, to, tre,” talte de. Så gav {N} slip. Og stjernen faldt. Opad. Langsomt først, så hurtigere. Den gamle klokke begyndte at ringe helt af sig selv, og Fru Krage fløj med et stykke af vejen, så højt en krage kan.","Tegn stjernen på vej op, med klokken, tårnet og Fru Krage."],
+["Juleaften","Det blev juleaften. Da det blev mørkt, gik {N} hen til vinduet og kiggede op, lige over taget, den tredje fra venstre. Dér. En lille stjerne, lidt klarere end de andre. Den blinkede. Én gang. To gange. {N} stak hånden i lommen. Den var varm. Nede i træet sad Fru Krage med sølvpapir om halsen og nikkede. Glædelig jul, lille stjerne. Og glædelig jul til dig.","Tegn jeres egen juleaften, med stjernen på himlen over huset."]
+];
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function names(){const a=['n1','n2','n3'].map(i=>document.getElementById(i).value.trim()).filter(Boolean);return a.length?a:['Barnet']}
+function join(a){return a.length==1?a[0]:a.slice(0,-1).join(', ')+' og '+a[a.length-1]}
+function tx(s,N,many){s=s.replace(/\{N\}s/g,N+(/[sxz]$/i.test(N)?'’':'s')).replace(/\{N\}/g,N);
+ if(many)s=s.replace(/Vil du hjælpe mig\?/,'Vil I hjælpe mig?').replace('Da jeg var bange, hjalp det','Da vi var bange, hjalp det').replace('gør mig modig','gør os modige').replace('væk fra dig','væk fra jer').replace('Så ved jeg, hvor du er','Så ved vi, hvor du er').replace('Så ved du, det er mig','Så ved I, det er mig').replace('Når du er ked af det','Når I er kede af det').replace('glædelig jul til dig','glædelig jul til jer');
+ return esc(s)}
+const star=n=>`<svg class="day" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3l8 19 21 2-16 14 5 21-18-11-18 11 5-21L3 24l21-2z" fill="#f2c14e" stroke="#e0a82e" stroke-width="2" stroke-linejoin="round"/><text x="32" y="41" text-anchor="middle">${n}</text></svg>`;
+function build(){const a=names(),N=join(a),many=a.length>1,b=document.getElementById('book');
+ let h=`<div class="pg cover"><svg viewBox="0 0 200 200" aria-hidden="true"><path d="M100 38l15 40 43 3-33 27 11 42-36-23-36 23 11-42-33-27 43-3z" fill="#f2c14e" stroke="#fff3c9" stroke-width="3" stroke-linejoin="round"/></svg><h3>Stjernen i lommen</h3><p class="by" style="max-width:none">fortalt til og tegnet af ${esc(N)}</p><p style="max-width:none;color:#c9cde0">En julekalender i 24 kapitler · december 2026</p></div>`;
+ CH.forEach((c,i)=>{h+=`<div class="pg">${star(i+1)}<h3>${esc(c[0])}</h3><p>${tx(c[1],N,many)}</p><p class="task">${esc(c[2])}</p><div class="frame">${i+1}. december</div></div>`});
+ h+=`<div class="pg dip"><h3>Denne bog er lavet af</h3><p class="by" style="font:600 2.4rem var(--hand);color:var(--red);max-width:none">${esc(N)}</p><p style="max-width:none">som fandt en stjerne, samlede syv slags lys og fulgte den hjem, i december 2026.</p><p class="small" style="max-width:none">Underskrift fra en voksen, der så det hele: ____________________</p></div>`;
+ b.innerHTML=h}
+document.getElementById('go').onclick=()=>{build();document.getElementById('book').scrollIntoView({behavior:'smooth'})};
+document.getElementById('pr').onclick=()=>{build();setTimeout(()=>print(),50)};
+['n1','n2','n3'].forEach(i=>document.getElementById(i).addEventListener('input',build));build();
+</script></body></html>
